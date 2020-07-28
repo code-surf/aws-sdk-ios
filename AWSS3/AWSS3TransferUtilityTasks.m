@@ -17,7 +17,7 @@
 #import "AWSS3TransferUtilityTasks.h"
 #import "AWSS3TransferUtilityDatabaseHelper.h"
 #import "AWSS3PreSignedURL.h"
-#import <AWSCore/AWSFMDB.h>
+#import <AWSCore_jolo/AWSFMDB.h>
 
 
 @interface AWSS3TransferUtilityExpression()

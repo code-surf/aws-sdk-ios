@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = 'AWSS3'
+  s.name         = 'AWSS3_jolo'
   s.version      = '2.13.4'
   s.summary      = 'Amazon Web Services SDK for iOS.'
 
@@ -13,6 +13,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => 'https://github.com/code-surf/aws-sdk-ios.git',
                      :branch => 'master'}
   s.requires_arc = true
-  s.dependency 'AWSCore', '2.13.4'
+  s.dependency 'AWSCore_jolo', '2.13.4'
   s.source_files = 'AWSS3/*.{h,m}'
 end

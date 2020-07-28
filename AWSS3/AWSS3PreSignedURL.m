@@ -14,11 +14,11 @@
 //
 
 #import "AWSS3PreSignedURL.h"
-#import <AWSCore/AWSBolts.h>
-#import <AWSCore/AWSCategory.h>
-#import <AWSCore/AWSSignature.h>
-#import <AWSCore/AWSCocoaLumberjack.h>
-#import <AWSCore/AWSSynchronizedMutableDictionary.h>
+#import <AWSCore_jolo/AWSBolts.h>
+#import <AWSCore_jolo/AWSCategory.h>
+#import <AWSCore_jolo/AWSSignature.h>
+#import <AWSCore_jolo/AWSCocoaLumberjack.h>
+#import <AWSCore_jolo/AWSSynchronizedMutableDictionary.h>
 #import <CommonCrypto/CommonCrypto.h>
 
 NSString *const AWSS3PresignedURLErrorDomain = @"com.amazonaws.AWSS3PresignedURLErrorDomain";

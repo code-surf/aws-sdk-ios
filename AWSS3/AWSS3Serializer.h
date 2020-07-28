@@ -14,7 +14,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <AWSCore/AWSCore.h>
+#import <AWSCore_jolo/AWSCore.h>
 
 @interface AWSS3RequestSerializer : NSObject <AWSURLRequestSerializer>
 

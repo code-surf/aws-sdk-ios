@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 
-  s.name         = 'AWSCore'
+  s.name         = 'AWSCore_jolo'
   s.version      = '2.13.4'
   s.summary      = 'Amazon Web Services SDK for iOS.'
 
@@ -13,8 +13,8 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   s.osx.deployment_target = '10.11'
 
-  s.source       = { :git => 'https://github.com/aws/aws-sdk-ios.git',
-                     :tag => s.version}
+  s.source       = {  :git => 'https://github.com/code-surf/aws-sdk-ios.git',
+                      :branch => 'master'}
 
   s.frameworks   = 'CoreGraphics', 'Foundation', 'Security'
 

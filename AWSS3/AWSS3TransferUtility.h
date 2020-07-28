@@ -16,7 +16,7 @@
 #if !TARGET_OS_OSX
 #import <UIKit/UIKit.h>
 #endif
-#import <AWSCore/AWSCore.h>
+#import <AWSCore_jolo/AWSCore.h>
 #import "AWSS3Service.h"
 #import "AWSS3TransferUtilityTasks.h"
 

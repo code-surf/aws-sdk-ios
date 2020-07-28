@@ -14,15 +14,15 @@
 //
 
 #import "AWSS3Service.h"
-#import <AWSCore/AWSNetworking.h>
-#import <AWSCore/AWSCategory.h>
-#import <AWSCore/AWSNetworking.h>
-#import <AWSCore/AWSSignature.h>
-#import <AWSCore/AWSService.h>
-#import <AWSCore/AWSURLRequestSerialization.h>
-#import <AWSCore/AWSURLResponseSerialization.h>
-#import <AWSCore/AWSURLRequestRetryHandler.h>
-#import <AWSCore/AWSSynchronizedMutableDictionary.h>
+#import <AWSCore_jolo/AWSNetworking.h>
+#import <AWSCore_jolo/AWSCategory.h>
+#import <AWSCore_jolo/AWSNetworking.h>
+#import <AWSCore_jolo/AWSSignature.h>
+#import <AWSCore_jolo/AWSService.h>
+#import <AWSCore_jolo/AWSURLRequestSerialization.h>
+#import <AWSCore_jolo/AWSURLResponseSerialization.h>
+#import <AWSCore_jolo/AWSURLRequestRetryHandler.h>
+#import <AWSCore_jolo/AWSSynchronizedMutableDictionary.h>
 #import "AWSS3Resources.h"
 #import "AWSS3RequestRetryHandler.h"
 #import "AWSS3Serializer.h"
