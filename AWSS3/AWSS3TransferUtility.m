@@ -1980,7 +1980,7 @@ internalDictionaryToAddSubTaskTo: (NSMutableDictionary *) internalDictionaryToAd
 }
 
 #pragma mark - UIApplicationDelegate interceptor
-
+#if !TARGET_OS_OSX
 + (void)interceptApplication:(UIApplication *)application
 handleEventsForBackgroundURLSession:(NSString *)identifier
            completionHandler:(void (^)(void))completionHandler {
@@ -1996,11 +1996,33 @@ handleEventsForBackgroundURLSession:(NSString *)identifier
         AWSS3TransferUtility *transferUtility = [_serviceClients objectForKey:key];
         if ([identifier isEqualToString:transferUtility.sessionIdentifier]) {
             AWSDDLogDebug(@"Setting completion handler for urlSession [%@]", identifier);
-            
+
             transferUtility.backgroundURLSessionCompletionHandler = completionHandler;
         }
     }
 }
+#else
++ (void)interceptApplication:(NSApplication *)application
+handleEventsForBackgroundURLSession:(NSString *)identifier
+           completionHandler:(void (^)(void))completionHandler {
+    AWSDDLogDebug(@"interceptApplication called for URLSession [%@]", identifier);
+
+    // For the default service client
+    if ([identifier isEqualToString:_defaultS3TransferUtility.sessionIdentifier]) {
+        _defaultS3TransferUtility.backgroundURLSessionCompletionHandler = completionHandler;
+    }
+
+    // For the SDK managed service clients
+    for (NSString *key in [_serviceClients allKeys]) {
+        AWSS3TransferUtility *transferUtility = [_serviceClients objectForKey:key];
+        if ([identifier isEqualToString:transferUtility.sessionIdentifier]) {
+            AWSDDLogDebug(@"Setting completion handler for urlSession [%@]", identifier);
+
+            transferUtility.backgroundURLSessionCompletionHandler = completionHandler;
+        }
+    }
+}
+#endif
 
 #pragma mark - NSURLSessionDelegate
 
